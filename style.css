@@ -48,3 +48,49 @@ h2 {
 .midi-link:hover {
     text-decoration: underline;
 }
+
+.desc-link {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #008000; /* Green color for description link */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.desc-link:hover {
+    text-decoration: underline;
+}
+
+/* Styles for description pages */
+.description-page {
+    align-items: flex-start;
+    padding: 20px 40px;
+}
+
+.description-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.description-content h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description-page a {
+    color: #367cb5;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.description-page a:hover {
+    text-decoration: underline;
+}
