@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Songs</h1>
+
+    <div class="music-player">
+        <h2>地中海のサンバ <a href="music/CHICHU.MID" download class="midi-link">(MIDI: CHICHU.MID)</a></h2>
+        <audio class="plyr" controls src="music/chichu.mp3"></audio>
+    </div>
+
+    <div class="music-player">
+        <h2>サンバdeエイラット <a href="music/EILAT.MID" download class="midi-link">(MIDI: EILAT.MID)</a></h2>
+        <audio class="plyr" controls src="music/eilat.mp3"></audio>
+    </div>
+
+    <div class="music-player">
+        <h2>日暮れのヘルツェリア <a href="music/HERZLIA.MID" download class="midi-link">(MIDI: HERZLIA.MID)</a></h2>
+        <audio class="plyr" controls src="music/herzlia.mp3"></audio>
+    </div>
+
+    <div class="music-player">
+        <h2>一身(ひとり)になりたい <a href="music/HITORI.MID" download class="midi-link">(MIDI: HITORI.MID)</a></h2>
+        <audio class="plyr" controls src="music/hitori.mp3"></audio>
+    </div>
+
+    <div class="music-player">
+        <h2>Rotev Jerusalem <a href="music/ROTEV88.MID" download class="midi-link">(MIDI: ROTEV88.MID)</a></h2>
+        <audio class="plyr" controls src="music/rotev88.mp3"></audio>
+    </div>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        const players = Array.from(document.querySelectorAll('.plyr')).map(p => new Plyr(p));
+
+        // 他のプレーヤーが再生されたら、再生中のものを停止する
+        players.forEach(instance => {
+            instance.on('play', () => {
+                players.forEach(otherInstance => {
+                    if (instance !== otherInstance) {
+                        otherInstance.pause();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #111;
+}
+
+.music-player {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+/* Plyrのメインカラー（進行バー、アイコンなど）を赤に設定 */
+:root {
+    --plyr-color-main: red;
+}
+
+/* Plyrの音量スライダーの背景色をグレーに設定 */
+.plyr--audio .plyr__volume input[type=range] {
+    color: #a0a0a0;
+}
+
+.midi-link {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #367cb5;
+    text-decoration: none;
+}
+
+.midi-link:hover {
+    text-decoration: underline;
+}
